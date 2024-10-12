@@ -1,3 +1,6 @@
+/* продолжить добавлять стили для разметки */
+
+
 *,
 *::before,
 *::after {
@@ -13,9 +16,20 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+}
+
+.visually-hidden {
+  position: absolute; 
+  width: 1px;  
+  height: 1px;
+  margin: -1px; 
+  padding: 0; 
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  overflow: hidden
 }
 
 h1,
@@ -36,3 +50,136 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin: 133px 30px;
+  width: 1140px;
+  height: 534px;
+}
+
+.result {
+    display: flex;
+    margin-bottom: 4px;
+    padding-bottom: 5px;
+    flex-direction: column;
+    width: 711px;
+    height: 456px;
+}
+
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 26px;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+
+.content__accent {
+  color: #545050;
+}
+
+.content__accent::after {
+  content: "-";
+  position: relative;
+  bottom: 10px;
+  left: 2px;
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 3px ;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+
+}
+
+.content__video-card-thumbnail {
+  flex-shrink: 0;
+  width: 194px;
+  height: 103px ;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
